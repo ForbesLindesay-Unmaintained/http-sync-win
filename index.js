@@ -1,6 +1,5 @@
 'use strict';
 
-var execute = require('execSync').run;
 var execute = require('shelljs').exec;
 var paths = require('./lib/paths');
 var doRequest = require.resolve('./lib/do-request');
