@@ -14,7 +14,7 @@ Add both `http-sync` and `http-sync-win` to your optional dependencies:
 {
   "optionalDependencies": {
     "http-sync": "0.0.4",
-    "http-sync-win": "0.0.0"
+    "http-sync-win": "0.0.4"
   }
 }
 ```
