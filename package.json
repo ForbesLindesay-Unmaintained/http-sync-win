@@ -1,0 +1,22 @@
+{
+  "name": "http-sync-win",
+  "version": "0.0.0",
+  "description": "Use shelljs and execSync to get full windows compatability for http-sync",
+  "keywords": [],
+  "dependencies": {
+    "execSync": "~1.0.1-pre",
+    "rimraf": "~2.2.5",
+    "json-literal": "~1.1.0",
+    "shelljs": "~0.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/http-sync-win.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT"
+}
