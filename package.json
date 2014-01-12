@@ -6,7 +6,8 @@
   "dependencies": {
     "rimraf": "~2.2.5",
     "json-literal": "~1.1.0",
-    "shelljs": "~0.2.6"
+    "shelljs": "~0.2.6",
+    "concat-stream": "~1.4.1"
   },
   "devDependencies": {},
   "scripts": {
