@@ -46,6 +46,8 @@ CurlRequest.prototype = {
     this.write(data);
     this._options.headers = this._headers;
     paths.reset();
+    paths.requestBody.write(this._options.body);
+    delete this._options.body;
     paths.request.set(this._options);
     execute('node ' + doRequest);
     try {
@@ -61,6 +63,7 @@ CurlRequest.prototype = {
         }
         return;
       }
+      res.body = paths.responseBody.read();
       return res;
     } catch (ex) {
       var err;
@@ -76,17 +79,16 @@ CurlRequest.prototype = {
 
 
 exports.request = function(options) {
-    options.method = options.method || 'GET';
-    options.method = options.method.toUpperCase();
+  options.method = options.method || 'GET';
+  options.method = options.method.toUpperCase();
 
-    options.protocol = options.protocol || 'http';
-    options.port = options.port || (options.protocol === 'https' ? 443 : 80);
-    options.path = options.path || '/';
-    options.headers = options.headers || { };
-    options.host = options.host || '127.0.0.1';
-    options.body = options.body || '';
-    options.rejectUnauthorized = options.rejectUnauthorized === false ?
-        false : true;
+  options.protocol = options.protocol || 'http';
+  options.port = options.port || (options.protocol === 'https' ? 443 : 80);
+  options.path = options.path || '/';
+  options.headers = options.headers || { };
+  options.host = options.host || '127.0.0.1';
+  options.body = options.body || '';
+  options.rejectUnauthorized = options.rejectUnauthorized === false ? false : true;
 
-    return new CurlRequest(options);
+  return new CurlRequest(options);
 };
