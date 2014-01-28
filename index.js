@@ -45,11 +45,12 @@ CurlRequest.prototype = {
   end: function(data) {
     this.write(data);
     this._options.headers = this._headers;
-    paths.reset();
+    paths.before();
     paths.requestBody.write(this._options.body);
     delete this._options.body;
     paths.request.set(this._options);
-    execute('node ' + doRequest);
+    execute('node ' + doRequest + ' ' + paths.id);
+
     try {
       var res = paths.response.get();
       if (res.timedout) {
@@ -61,17 +62,21 @@ CurlRequest.prototype = {
         } else {
             this._options._timeout.callback();
         }
+        paths.after();
         return;
       }
       res.body = paths.responseBody.read();
+      paths.after();
       return res;
     } catch (ex) {
       var err;
       try {
         err = paths.error.get();
       } catch (ex2) {
+        paths.after();
         throw ex;
       }
+      paths.after();
       throw err;
     }
   }
