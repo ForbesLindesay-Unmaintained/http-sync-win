@@ -3,8 +3,8 @@
 Use [shelljs](https://github.com/arturadib/shelljs) to get full windows compatability for [http-sync](https://github.com/dhruvbird/http-sync)
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/http-sync-win/master.svg)](https://travis-ci.org/ForbesLindesay/http-sync-win)
-[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/http-sync-win.svg)](https://gemnasium.com/ForbesLindesay/http-sync-win)
-[![NPM version](https://img.shields.io/npm/v/http-sync-win.svg)](http://badge.fury.io/js/http-sync-win)
+[![Dependency Status](https://img.shields.io/david/ForbesLindesay/http-sync-win.svg)](https://david-dm.org/ForbesLindesay/http-sync-win)
+[![NPM version](https://img.shields.io/npm/v/http-sync-win.svg)](https://www.npmjs.com/package/http-sync-win)
 
 ## Installation
 
