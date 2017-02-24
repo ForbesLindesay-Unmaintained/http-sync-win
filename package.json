@@ -4,10 +4,10 @@
   "description": "Use shelljs and execSync to get full windows compatability for http-sync",
   "keywords": [],
   "dependencies": {
-    "rimraf": "~2.2.5",
+    "rimraf": "~2.6.1",
     "json-literal": "~1.1.0",
-    "shelljs": "~0.2.6",
-    "concat-stream": "~1.4.1"
+    "shelljs": "~0.7.6",
+    "concat-stream": "~1.6.0"
   },
   "devDependencies": {},
   "scripts": {
