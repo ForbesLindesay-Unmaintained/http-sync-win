@@ -1,5 +1,7 @@
 # http-sync-win
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/http-sync-win.svg)](https://greenkeeper.io/)
+
 Use [shelljs](https://github.com/arturadib/shelljs) to get full windows compatability for [http-sync](https://github.com/dhruvbird/http-sync)
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/http-sync-win/master.svg)](https://travis-ci.org/ForbesLindesay/http-sync-win)
